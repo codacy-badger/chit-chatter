@@ -46,7 +46,7 @@ module.exports.add =function(arr, expr, resp) {
 module.exports.train = function() {
 classifier.train()
 }
-module.exports.test =function() {
+module.exports.testing =function() {
     console.log('Success!')
     }
 module.exports.chain = function(part, name) {
