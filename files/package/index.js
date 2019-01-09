@@ -25,10 +25,7 @@ var responses = {
 var dia = {
 
 }
-module.exports={
-    dia,
-    responses
-  }
+
 // resp end
 //Functions 
 
@@ -45,7 +42,7 @@ module.exports.add = function(arr, expr, resp) {
     arr.forEach(e => {
         classifier.add(e, expr)
     });
-    responses[expr] = resp
+    ['responses'][expr] = resp
 }
 module.exports.train = function() {
 classifier.train()
