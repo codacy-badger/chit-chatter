@@ -79,4 +79,11 @@ module.exports.listenChain = function(expr, message) {
     });
 }
 
+
+module.exports.classify = function(message) {
+
+        const classifications = classifier.getClassifications(`${message}`);
+        return classifications.reduce((prev, current) => (prev.value > current.value) ? prev : current)
+   
+}
 // func end

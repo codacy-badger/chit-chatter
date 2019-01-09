@@ -43,6 +43,11 @@ array of possible responses(**array**)
 ```js
 chat.train()
 ```
+> after it inside message listener
+```JavaScript
+chat.classify()
+```
+to get the expression from the message for further use
 **In order to add a  _dialog_:** call (use)
 
 ```JavaScript
@@ -55,8 +60,13 @@ expression which will be set to this kind of messages(**string**),
 **_But_ _remember_:**
 You will also need to call add() method with all the messages you use in your dialog and mark it's expression the same way **_but_** don't add last parameter (responses)
 
-
-There are also 
+**and**
+call
+```JavaScript
+chat.listenChain(expression, message)
+```
+to handle the dialogues(it sends the messages itself!).
+##Other methods
 
 ```JavaScript
 chat.random(array)
@@ -67,9 +77,3 @@ to pick a random element of an array(it's needed when replying with one of the r
 chat.testing()
 ```
 to check if it works(if it does it will lof 'Success!' to the console)
-
-**and**
-```JavaScript
-chat.listenChain(expression, message)
-```
-to handle the dialogues(it sends the messages itself!).
