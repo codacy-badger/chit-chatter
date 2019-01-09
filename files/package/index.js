@@ -30,11 +30,11 @@ bot.login(token)
 }
 
 
-module.exports.add =function(arr, expr, resp, arr2) {
+module.exports.add = function(arr, expr, resp, obj) {
     arr.forEach(e => {
         classifier.add(e, expr)
     });
-    arr2[expr] = resp
+    obj[expr] = resp
 }
 module.exports.train = function() {
 classifier.train()
