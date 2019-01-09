@@ -21,11 +21,14 @@ var state = 0
 var responses = {
 
 }
-exports.responses = responses
+
 var dia = {
 
 }
-exports.dia = dia
+module.exports={
+    dia,
+    responses
+  }
 // resp end
 //Functions 
 
