@@ -1,11 +1,11 @@
 {
   "name": "chit-chatter",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "This package aims to making producing Discord(and not only it) chatbots much easier ",
   "main": "package/main.js",
   "scripts": {
-    "test": "cd ../../../testing && node test.js && exit 1",
-    "release": "cd ../../files && git add . &&  git commit -m 'Release' && git push &&  cd package && npm version patch && npm publish && exit 1"
+    "test": "cd ../../../testing && node test.js",
+    "release": "cd ../../files && git add . &&  git commit -m 'Release' && git push &&  cd package && npm version patch && npm publish"
   },
   "author": "",
   "license": "MIT",
