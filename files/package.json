@@ -1,13 +1,13 @@
 {
   "name": "chit-chatter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This package aims to making producing Discord(and not only it) chatbots much easier ",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "brain.js": "^1.6.1",
     "lodash": "^4.17.11"
