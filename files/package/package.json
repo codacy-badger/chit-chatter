@@ -5,7 +5,7 @@
   "main": "package/main.js",
   "scripts": {
     "test": "cd ../../../testing && node test.js && exit 1",
-    "release": "cd ../../files && git add . &&  git commit -m 'Release' && git push && npm version patch && npm publish && exit 1"
+    "release": "cd ../../files && git add . &&  git commit -m 'Release' && git push &&  cd package && npm version patch && npm publish && exit 1"
   },
   "author": "",
   "license": "MIT",
