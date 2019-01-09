@@ -45,9 +45,9 @@ chat.train()
 ```
 > after it inside message listener
 ```JavaScript
-chat.classify()
+chat.classify(string)
 ```
-to get the expression from the message for further use
+to get the expression from the message for further use(string -> message)
 **In order to add a  _dialog_:** call (use)
 
 ```JavaScript
