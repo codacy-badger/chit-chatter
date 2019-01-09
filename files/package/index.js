@@ -18,13 +18,6 @@ const similar = new SimilarSearch();
 //Responses
 
 var state = 0
-var responses = {
-
-}
-
-var dia = {
-
-}
 // resp end
 //Functions 
 
@@ -37,11 +30,11 @@ bot.login(token)
 }
 
 
-module.exports.add =function(arr, expr, resp) {
+module.exports.add =function(arr, expr, resp, arr2) {
     arr.forEach(e => {
         classifier.add(e, expr)
     });
-    responses[expr] = resp
+    arr2[expr] = resp
 }
 module.exports.train = function() {
 classifier.train()
