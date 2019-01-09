@@ -27,30 +27,29 @@ var dia = {
 }
 // resp end
 //Functions 
-exports.chat = function () {
-function random(arr) {
+
+module.exports.ranodm = function(arr) {
     var index = Math.floor(Math.random() * arr.length);
     return arr[index];
 }
-function login(token) {
+module.exports.login = function (token) {
 bot.login(token)
 }
 
 
-function add(arr, expr, resp) {
+module.exports.add =function(arr, expr, resp) {
     arr.forEach(e => {
         classifier.add(e, expr)
     });
     responses[expr] = resp
 }
-function train() {
+module.exports.train = function() {
 classifier.train()
 }
-function test() {
+module.exports.test =function() {
     console.log('Success!')
     }
-
-function chain(part, name) {
+module.exports.chain = function(part, name) {
     var intentsOdd = []
     var repliesEven = []
     for (var i = 0; i < part.length; i += 2) { // take every second element
@@ -66,7 +65,7 @@ function chain(part, name) {
     console.log(dia[name])
 }
 
-function listenChain(expr, message) {
+module.exports.listenChain = function(expr, message) {
     dia[expr].intents.forEach((e, i) => {
         if (similar.getSimilarity(e.toString(), message.toString()) < 25 && i === state) {
             message.channel.send(dia[expr].replies[i])
@@ -79,5 +78,5 @@ function listenChain(expr, message) {
 
     });
 }
-}
+
 // func end
