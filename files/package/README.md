@@ -1,7 +1,6 @@
 ##  Chit-chatter
 [![](https://img.shields.io/github/languages/code-size/badges/shields.svg)](https://github.com/Valentin1503/chit-chatter)
 [![](https://img.shields.io/github/license/:user/:repo.svg)](https://github.com/Valentin1503/chit-chatter)
-Here's a link :point_right: : [NPM package](https://www.npmjs.com/package/chit-chatter)
 ###### Installation
 To install the package run:
 
@@ -56,7 +55,6 @@ expression which will be set to this kind of messages(**string**),
 **_But_ _remember_:**
 You will also need to call add() method with all the messages you use in your dialog and mark it's expression the same way **_but_** don't add last parameter (responses)
 
-##For those who use it as a package
 
 There are also 
 
@@ -64,6 +62,11 @@ There are also
 chat.random(array)
 ```
 to pick a random element of an array(it's needed when replying with one of the responses)
+
+```JavaScript
+chat.testing()
+```
+to check if it works(if it does it will lof 'Success!' to the console)
 
 **and**
 ```JavaScript

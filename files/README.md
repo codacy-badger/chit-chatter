@@ -56,7 +56,6 @@ expression which will be set to this kind of messages(**string**),
 **_But_ _remember_:**
 You will also need to call add() method with all the messages you use in your dialog and mark it's expression the same way **_but_** don't add last parameter (responses)
 
-##For those who use it as a package
 
 There are also 
 

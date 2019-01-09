@@ -28,7 +28,7 @@ var dia = {
 // resp end
 //Functions 
 
-module.exports.ranodm = function(arr) {
+module.exports.random = function(arr) {
     var index = Math.floor(Math.random() * arr.length);
     return arr[index];
 }

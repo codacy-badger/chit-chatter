@@ -71,4 +71,4 @@ try {
 } catch {
     return
 }
-bot.login('Your bot token');
+chat.login('Your bot token');
