@@ -39,6 +39,7 @@ bot.login(token)
 
 
 module.exports.add = function(obj, arr, expr, resp) {
+
     arr.forEach(e => {
         classifier.add(e, expr)
     });
