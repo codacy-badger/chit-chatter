@@ -26,7 +26,7 @@ chat.login('Your token here')
 at the end of the main.js file.
 
 
-**In order to add a simple _response_:** call (use)
+**In order to add a _simple response_:** call (use)
 
 ```JavaScript
 chat.add(array, expression, array)
