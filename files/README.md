@@ -82,6 +82,7 @@ call
 chat.listenChain(expression, message)
 ```
 to handle the dialogues(it sends the messages itself!).
+
 ##Other methods
 
 ```JavaScript
