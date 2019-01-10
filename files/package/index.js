@@ -89,8 +89,9 @@ module.exports.classify = function(message) {
    
 }
 
-function waitMessage() {
-    async message => {
+module.exports.listenChat = function() {
+
+    bot.on('message',  async message => {
         
         //Channel type check
         if (message.author.bot) return;
@@ -113,10 +114,6 @@ function waitMessage() {
         } else if (message.mentions.members.first().user.username === bot.user.username) {
             chat.listenChain(max.label, message)
 
-        }}
-}
-module.exports.listenChat = function(message, waitMessage ) {
-
-    bot.on('message', waitMessage)
+        }})
 }
 // func end
