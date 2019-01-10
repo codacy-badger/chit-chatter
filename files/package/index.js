@@ -88,4 +88,30 @@ module.exports.classify = function(message) {
         return classifications.reduce((prev, current) => (prev.value > current.value) ? prev : current)
    
 }
+module.exports.listenChat = function() {
+    bot.on('message', async message => {
+        //Channel type check
+        if (message.author.bot) return;
+        if (message.channel.type === 'dm') return;
+        // chtcheck end
+        // Variables
+        let messageArr = message.content.split(" ");
+        messageArr = messageArr.map(function (value) {
+            return value.toLowerCase();
+        })
+        // var end
+
+        const max = chat.classify(message)
+        if (!message.mentions.members.first()) {
+            console.log(max)
+            var response = chat.random(responses[max.label])
+            if (max.value >= 0.8) {
+                message.channel.send(`${response}`)
+            }
+        } else if (message.mentions.members.first().user.username === bot.user.username) {
+            chat.listenChain(max.label, message)
+
+        }
+    })
+}
 // func end
