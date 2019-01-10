@@ -1,0 +1,14 @@
+{
+  "name": "files",
+  "version": "1.0.0",
+  "description": "[![](https://img.shields.io/github/languages/code-size/badges/shields.svg)](https://github.com/Valentin1503/chit-chatter)\r [![](https://img.shields.io/github/license/:user/:repo.svg)](https://github.com/Valentin1503/chit-chatter)\r ###### Installation\r To install the package run:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.12.0"
+  }
+}

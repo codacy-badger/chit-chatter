@@ -89,37 +89,43 @@ module.exports.classify = function(message) {
    
 }
 
-module.exports.listenChat = function() {
-    bot.on('ready', async () => {
-        console.log('Bot is running!');
-
-        bot.user.setActivity('some music', {
-            type: 'LISTENING'
-        });
-    })
-    bot.on('message',  async message => {
-        
+module.exports.listen = function(name, code) {
+ async message => {
         //Channel type check
         if (message.author.bot) return;
         if (message.channel.type === 'dm') return;
         // chtcheck end
         // Variables
+        let prefix = config.prefix;
         let messageArr = message.content.split(" ");
+        let cmd = messageArr[0];
+        let args = messageArr.slice(1)
         messageArr = messageArr.map(function (value) {
-            return value.toLowerCase();
+          return value.toLowerCase();
         })
         // var end
-
+        if (cmd === `${prefix}${name}`) {
+           return code()
+        }
         const max = classify(message)
         if (!message.mentions.members.first()) {
             console.log(max)
-            var response = random(responses[max.label])
+            var response = chat.random(responses[max.label])
             if (max.value >= 0.8) {
                 message.channel.send(`${response}`)
             }
         } else if (message.mentions.members.first().user.username === bot.user.username) {
-            listenChain(max.label, message)
+            chat.listenChain(max.label, message)
 
-        }})
+        }}
 }
+module.exports.ready = function() {
+            async () => {
+            console.log('Bot is running!');
+          
+            bot.user.setActivity(text, {
+              type: activity
+            });
+          }
+        }
 // func end
