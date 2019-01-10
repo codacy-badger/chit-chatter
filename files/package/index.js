@@ -90,7 +90,13 @@ module.exports.classify = function(message) {
 }
 
 module.exports.listenChat = function() {
+    bot.on('ready', async () => {
+        console.log('Bot is running!');
 
+        bot.user.setActivity('some music', {
+            type: 'LISTENING'
+        });
+    })
     bot.on('message',  async message => {
         
         //Channel type check
@@ -104,15 +110,15 @@ module.exports.listenChat = function() {
         })
         // var end
 
-        const max = chat.classify(message)
+        const max = classify(message)
         if (!message.mentions.members.first()) {
             console.log(max)
-            var response = chat.random(responses[max.label])
+            var response = random(responses[max.label])
             if (max.value >= 0.8) {
                 message.channel.send(`${response}`)
             }
         } else if (message.mentions.members.first().user.username === bot.user.username) {
-            chat.listenChain(max.label, message)
+            listenChain(max.label, message)
 
         }})
 }
