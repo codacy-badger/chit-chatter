@@ -1,6 +1,6 @@
 {
   "name": "chit-chatter",
-  "version": "1.1.21",
+  "version": "1.1.22",
   "description": "This package aims to making producing Discord(and not only it) chatbots much easier ",
   "main": "./index.js",
   "scripts": {
