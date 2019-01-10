@@ -13,27 +13,43 @@ npm install chit-chatter
 ```
 
 ## Usage
-> Never delete (and don't forget to add to your code) responses object and dia object , it can't work without it!
+> Never delete (and don't forget to add to your code) responses object and dia object , it can't work without it! Also, use it as a first parameter when calling add()
 > First require chit-chatter 
 ```js
 const chat = require('chit-chatter')
 ```
 *This repository already got a sample bot in it which you can use after entering your bot's token into :point_down:*
-
 ```JavaScript
-chat.login('Your token here')
+bot.login('Your token here')
 ```
-at the end of the main.js file.
+at the end of the main.js file, also add :point_down:
 
+```js
+const {
+    Client
+} = require('discord.js');
+```
+at the very top
 
-**In order to add a simple _response_:** call (use)
+> and
+
+run 
+
+```js
+npm install discord.js 
+
+```
+in the terminal
+
+**In order to add a _simple response_:** call (use)
 
 ```JavaScript
-chat.add(array, expression, array)
+chat.add(object, array, expression, array)
 
 ```
 function in main.js(if you are modifying the sample bot)
 or into your code(if you are building your own) using this **_parameters_**:
+object for storing responses(**responses**)
 array of possible user messages that the bot will react to (**array**),
 expression which will be set to this kind of messages(**string**),
 array of possible responses(**array**)
