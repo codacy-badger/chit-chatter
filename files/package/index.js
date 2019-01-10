@@ -88,8 +88,10 @@ module.exports.classify = function(message) {
         return classifications.reduce((prev, current) => (prev.value > current.value) ? prev : current)
    
 }
-module.exports.listenChat = function() {
-    bot.on('message', async message => {
+
+function waitMessage() {
+    async message => {
+        
         //Channel type check
         if (message.author.bot) return;
         if (message.channel.type === 'dm') return;
@@ -111,7 +113,10 @@ module.exports.listenChat = function() {
         } else if (message.mentions.members.first().user.username === bot.user.username) {
             chat.listenChain(max.label, message)
 
-        }
-    })
+        }}
+}
+module.exports.listenChat = function(message, waitMessage ) {
+
+    bot.on('message', waitMessage)
 }
 // func end

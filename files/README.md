@@ -76,4 +76,4 @@ to pick a random element of an array(it's needed when replying with one of the r
 ```JavaScript
 chat.testing()
 ```
-to check if it works(if it does it will lof 'Success!' to the console)
+to check if it works(if it does it will log 'Success!' to the console)
